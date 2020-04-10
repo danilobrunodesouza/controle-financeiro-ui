@@ -1,0 +1,45 @@
+<div class="tabela-padrao">
+
+    <h1 class="text-center">{{titulo}}</h1>
+    <p-table [value]="objetos">
+        <ng-template pTemplate="header">
+        <tr>
+            <th *ngFor="let cabecalho of headers">
+                {{cabecalho}}
+            </th>
+            <th>Ações</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-objeto>
+        <tr>
+            <td *ngFor="let col of cols" class="text-center">
+                <div *ngIf="col.field == 'icone'">
+                    <i class="{{objeto[col.field]}}"></i>
+                </div>
+                <div *ngIf="col.field != 'icone'">
+                    {{objeto[col.field]}}
+                </div>
+            </td>
+            <td class="text-center">
+                <a routerLink="/{{urlDoObjeto}}/formulario/{{objeto.id}}" 
+                    class="botao-padrao">
+                    <i class="fa fa-pencil"></i>
+                </a>
+                <button type="button" (click)="dialogoDeRemocao($event, objeto)" pButton icon="fa fa-times"
+                class="ui-button-danger"></button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+
+<p-dialog header="Confirmação de Remoção do Item" [(visible)]="mostraDialogoDeRemocao" [style]="{width: '30vw'}">
+    <div class="conteudo-modal">
+        <p>Tem Certeza que deseja remover o item ? </p>
+    </div>
+    <p-footer>
+        <button type="button" pButton icon="pi pi-times" (click)="mostraDialogoDeRemocao=false" label="Não" class="ui-button-secondary"></button>
+        <button type="button" pButton icon="pi pi-check" (click)="confirmaAcaoDeRemocaoDoItem()" label="Sim"></button>
+    </p-footer>
+</p-dialog>
+</div>
+

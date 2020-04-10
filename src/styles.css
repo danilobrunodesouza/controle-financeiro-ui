@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+.text-center {
+    text-align: center;
+}
+
+.botao-padrao{
+    margin: 0px 10px;
+    padding: 5px 10px !important;
+    border-radius: 3px;
+    background-color: #5B0587 !important;
+    border: 1px solid #5B0587 !important;
+    text-decoration: none;
+    color: white;
+}
+
+.botao-padrao :hover{
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: #49036D !important;
+    border: 1px solid #49036D !important;
+    color: white !important;
+}
