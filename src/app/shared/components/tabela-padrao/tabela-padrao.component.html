@@ -17,7 +17,7 @@
                     <i class="{{objeto[col.field]}}"></i>
                 </div>
                 <div *ngIf="col.field != 'icone'">
-                    {{objeto[col.field]}}
+                    <span [outerHTML]="objeto[col.field] | mostraDadosNaTabela"></span>                  
                 </div>
             </td>
             <td class="text-center">

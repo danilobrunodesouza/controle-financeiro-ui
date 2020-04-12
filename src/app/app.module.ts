@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
 import { CategoriaModule } from './categoria/categoria.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegistroModule } from './registro/registro.module';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CategoriaModule
+    CategoriaModule,
+    RegistroModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
