@@ -17,6 +17,9 @@ export class RegistroListaComponent implements OnInit {
 
   urlDoObjeto = 'registro'
 
+  comPaginacao : boolean = true;
+  numeroDeLinhas : number = 10;
+
   constructor() { }
 
   ngOnInit(): void {

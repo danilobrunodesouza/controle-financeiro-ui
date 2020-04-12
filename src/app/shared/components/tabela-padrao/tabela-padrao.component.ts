@@ -13,6 +13,8 @@ export class TabelaPadraoComponent implements OnInit {
   @Input() headers : string[] = [];
   @Input() titulo : string = '';
   @Input() urlDoObjeto : string = '';
+  @Input() comPaginacao : boolean = false;
+  @Input() numeroDeLinhas : number = 10;
 
   mostraDialogoDeRemocao : boolean = false;
 

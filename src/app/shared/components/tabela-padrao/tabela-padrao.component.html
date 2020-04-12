@@ -1,7 +1,7 @@
 <div class="tabela-padrao">
 
     <h1 class="text-center">{{titulo}}</h1>
-    <p-table [value]="objetos">
+    <p-table [value]="objetos" [paginator]="comPaginacao" [rows]="numeroDeLinhas" >
         <ng-template pTemplate="header">
         <tr>
             <th *ngFor="let cabecalho of headers">
@@ -13,12 +13,8 @@
     <ng-template pTemplate="body" let-objeto>
         <tr>
             <td *ngFor="let col of cols" class="text-center">
-                <div *ngIf="col.field == 'icone'">
-                    <i class="{{objeto[col.field]}}"></i>
-                </div>
-                <div *ngIf="col.field != 'icone'">
-                    <span [outerHTML]="objeto[col.field] | mostraDadosNaTabela"></span>                  
-                </div>
+                <span [outerHTML]="objeto[col.field] | mostraDadosNaTabela"></span>                  
+                
             </td>
             <td class="text-center">
                 <a routerLink="/{{urlDoObjeto}}/formulario/{{objeto.id}}" 

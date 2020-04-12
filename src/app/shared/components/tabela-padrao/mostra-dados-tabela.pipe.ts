@@ -5,6 +5,13 @@ import {Tabelavel} from '../tabela-padrao/tabelavel.interface'
 export class MostraDadosTabela implements PipeTransform {
     
     transform(campo: any) {
+        if(typeof campo == 'string'){
+            if(campo.includes('fa fa-')){
+                return `<i class="${campo}"></i>`;
+            } else {
+                return campo;
+            }
+        }
         if(campo instanceof Object){
             if(campo instanceof Date){
                 return campo.toLocaleString('pt-br');

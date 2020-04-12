@@ -14,6 +14,9 @@ export class CategoriaListaComponent implements OnInit {
   titulo : string = 'Lista de Categorias';
   urlDoObjeto : string = 'categoria';
 
+  comPaginacao : boolean = false;
+  numeroDeLinhas : number = 10;
+
   constructor() { }
 
   ngOnInit(): void {
