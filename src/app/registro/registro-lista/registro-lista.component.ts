@@ -29,11 +29,15 @@ export class RegistroListaComponent implements OnInit {
     return [
       {
         id: 1, data: new Date(), categoria: new CategoriaModel(1, 'fa fa-home', 'Moradia'),
-        descricao: "descricao", valor: 10
+        descricao: "descricao", valor: 100
       },
       {
         id: 2, data: new Date(), categoria : new CategoriaModel(2, 'fa fa-graduation-cap', 'Educação'),
-        descricao: "descricao2", valor: 20
+        descricao: "descricao2", valor: 50
+      },
+      {
+        id: 3, data: new Date(), categoria : new CategoriaModel(2, 'fa fa-car', 'Carro'),
+        descricao: "descricao3", valor: 25
       },
     ];
 }

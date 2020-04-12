@@ -8,17 +8,20 @@ import { HeaderModule } from './header/header.module';
 import { CategoriaModule } from './categoria/categoria.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistroModule } from './registro/registro.module';
+import { RelatoriosModule } from './relatorios/relatorios.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    
   ],
   imports: [
     BrowserModule,
     HeaderModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    RelatoriosModule,
     CategoriaModule,
     RegistroModule,
   ],

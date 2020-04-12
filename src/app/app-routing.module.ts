@@ -5,6 +5,7 @@ import { CategoriaListaComponent } from './categoria/categoria-lista/categoria-l
 import { CategoriaFormularioComponent } from './categoria/categoria-formulario/categoria-formulario.component';
 import { RegistroComponent } from './registro/registro.component';
 import { RegistroListaComponent } from './registro/registro-lista/registro-lista.component';
+import { GraficoDonutComponent } from './relatorios/grafico-donut/grafico-donut.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,9 @@ const routes: Routes = [
   
   {path : 'registro', component : RegistroComponent},
   {path : 'registro/lista', component : RegistroListaComponent},
+ 
+ 
+  {path : 'relatorio/donut', component : GraficoDonutComponent},
 ];
 
 @NgModule({

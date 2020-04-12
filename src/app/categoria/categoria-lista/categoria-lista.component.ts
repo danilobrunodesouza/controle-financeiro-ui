@@ -27,7 +27,9 @@ export class CategoriaListaComponent implements OnInit {
       { id : 1, icone : 'fa fa-home', titulo : "Moradia"},
       { id : 2, icone : 'fa fa-graduation-cap', titulo : "Educação"},
       { id : 3, icone : 'fa fa-car', titulo : "Carro"},
+      { id : 3, icone : 'fa fa-subway', titulo : "Transporte"},
       { id : 4, icone : 'fa fa-file', titulo : "Conta Fixa"},
+      { id : 6, icone : 'fa fa-shopping-cart', titulo : "Supermercado"},
     ];
   }
 
