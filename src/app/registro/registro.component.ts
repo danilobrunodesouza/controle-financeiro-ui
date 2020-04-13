@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-registro',
+  selector: 'fc-registro',
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.css']
 })
@@ -11,5 +11,7 @@ export class RegistroComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  
 
 }

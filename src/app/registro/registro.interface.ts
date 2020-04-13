@@ -1,4 +1,3 @@
-
 import { CategoriaModel } from '../categoria/categoria.model';
 
 export interface Registro {

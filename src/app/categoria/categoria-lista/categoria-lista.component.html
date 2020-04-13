@@ -1,7 +1,7 @@
 <cf-tabela-padrao 
     [titulo]="titulo"
     [urlDoObjeto]="urlDoObjeto"
-    [objetos]="categorias"
+    [objetos]="categorias$ | async"
     [numeroDeLinhas]="numeroDeLinhas"
     [comPaginacao]="comPaginacao"
     [headers]="headers"

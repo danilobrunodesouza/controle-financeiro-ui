@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Registro } from '../registro.interface';
 import { CategoriaModel } from 'src/app/categoria/categoria.model';
+import { RegistroService } from '../registro.service';
+import { ThrowStmt } from '@angular/compiler';
+import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-registro-lista',
+  selector: 'fc-registro-lista',
   templateUrl: './registro-lista.component.html',
   styleUrls: ['./registro-lista.component.css']
 })
 export class RegistroListaComponent implements OnInit {
 
-  registros: Registro[] = [];
+  registros$: Observable<Registro[]>;
 
   titulo = 'Lista de Registros';
 
@@ -17,34 +20,21 @@ export class RegistroListaComponent implements OnInit {
 
   urlDoObjeto = 'registro'
 
-  comPaginacao : boolean = true;
-  numeroDeLinhas : number = 10;
+  comPaginacao: boolean = true;
+  numeroDeLinhas: number = 10;
 
-  constructor() { }
+  constructor(private registroService: RegistroService) { }
 
   ngOnInit(): void {
-    this.registros = this._pegaRegistros();
+    this.registros$ = this._pegaRegistros();
   }
-  _pegaRegistros(): Registro[] {
-    return [
-      {
-        id: 1, data: new Date(), categoria: new CategoriaModel(1, 'fa fa-home', 'Moradia'),
-        descricao: "descricao", valor: 100
-      },
-      {
-        id: 2, data: new Date(), categoria : new CategoriaModel(2, 'fa fa-graduation-cap', 'Educação'),
-        descricao: "descricao2", valor: 50
-      },
-      {
-        id: 3, data: new Date(), categoria : new CategoriaModel(2, 'fa fa-car', 'Carro'),
-        descricao: "descricao3", valor: 25
-      },
-    ];
-}
+  _pegaRegistros(): Observable<Registro[]> {
+    return this.registroService.pegaTodosRegistros();
+  }
 
-recebeItemParaSerRemovido($event) {
-  console.log("item para ser removido ");
+  recebeItemParaSerRemovido($event) {
+    console.log("item para ser removido ");
 
-}
+  }
 
 }
