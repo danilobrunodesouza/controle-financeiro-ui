@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'cf-categoria-formulario',
@@ -8,25 +9,43 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class CategoriaFormularioComponent implements OnInit {
 
-  formCategoria : FormGroup;
+  formCategoria: FormGroup;
+  idCategoria: number;
 
-  constructor(private formBuilder : FormBuilder) { }
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private formBuilder: FormBuilder,
+  ) { }
 
   ngOnInit(): void {
-    this.formCategoria = this.formBuilder.group({
-      id : [''], 
-      titulo : ['', Validators.required],
-      icone : ['', Validators.required],
-    });
+    this.idCategoria = this.activatedRoute.snapshot.params.idCategoria;
+
+    if (!!this.idCategoria) {
+      this.formCategoria = this.formBuilder.group({
+        titulo: ['', Validators.required],
+        icone: ['', Validators.required],
+      });
+    } else {
+      this.formCategoria = this.formBuilder.group({
+        titulo: ['', Validators.required],
+        icone: ['', Validators.required],
+      });
+
+    }
   }
 
-  submitFormulario(){
-    const id = this.formCategoria.get('id').value;
+  submitFormulario() {
+    const id = this.idCategoria;
     const titulo = this.formCategoria.get('titulo').value;
     const icone = this.formCategoria.get('icone').value;
 
-    console.log([id, titulo, icone].join(" - "));
-    
+    if(!!id){
+      console.log({id, titulo, icone});
+    } else {
+      console.log({titulo, icone});
+    }
+
+    alert("feito o submit");
   }
 
 }

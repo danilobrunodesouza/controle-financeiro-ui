@@ -20,3 +20,11 @@
     border: 1px solid #49036D !important;
     color: white !important;
 }
+
+.botao-padrao :disabled{
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: rgb(222, 157, 255) !important;
+    border: 1px solid #49036D !important;
+    color: white !important;
+}

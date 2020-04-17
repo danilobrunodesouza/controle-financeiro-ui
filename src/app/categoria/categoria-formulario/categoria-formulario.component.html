@@ -1,13 +1,9 @@
 <div class="text-center">
     <h1>Formulário de Categoria</h1>
     <form [formGroup]="formCategoria" (submit)="submitFormulario()">
-        <div class="p-grid p-justify-center">
+        <div class="p-grid p-justify-center" *ngIf="!!idCategoria">
             <div class="p-col-4">
-                <cf-input-text-padrao
-                    label="Código"
-                    formControlName="id"
-                    parentForm="formCategoria"
-                ></cf-input-text-padrao>
+                <input type="text" [value]="idCategoria"> 
             </div>
         </div>
         <br/>
@@ -15,8 +11,8 @@
             <div class="p-col-4">
                 <cf-input-text-padrao
                 label="Ícone"
-                formControlName="icone"
-                parentForm="formCategoria"
+                nomeFormulario="icone"
+                [parentForm]="formCategoria"
                 ></cf-input-text-padrao>
             </div>
         </div>
@@ -25,15 +21,18 @@
             <div class="p-col-4">
                 <cf-input-text-padrao
                 label="Título"
-                formControlName="titulo"
-                parentForm="formCategoria"
+                nomeFormulario="titulo"
+                [parentForm]="formCategoria"
                 ></cf-input-text-padrao>
             </div>
         </div>
         <br/>
         <div class="p-grid p-justify-center">
             <div class="p-col-4">
-                <button type="submit" class="ui-button botao-padrao">Cadastrar</button>
+                <button pButton type="submit"
+                    [disabled]="formCategoria.invalid"
+                    icon="fa fa-plus" label="Cadastrar"></button>
+                    
             </div>
         </div>
     </form>

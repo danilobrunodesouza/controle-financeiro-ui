@@ -5,6 +5,7 @@ import { CategoriaFormularioComponent } from './categoria-formulario.component';
 import {InputTextModule} from 'primeng/inputtext';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { InputsModule } from 'src/app/shared/components/inputs/inputs.module';
+import {ButtonModule} from 'primeng/button';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { InputsModule } from 'src/app/shared/components/inputs/inputs.module';
     imports : [ 
         CommonModule,
         FormsModule,
+        ButtonModule,
         ReactiveFormsModule,
         InputsModule,
      ]

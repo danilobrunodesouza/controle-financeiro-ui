@@ -9,12 +9,17 @@ import { FormGroup } from '@angular/forms';
 export class InputTextPadraoComponent implements OnInit {
 
   @Input() label : string = 'teste';
-  @Input() formControlName : string = '';
+  @Input() nomeFormulario : string = '';
   @Input() parentForm : FormGroup;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.label);
+    console.log(this.nomeFormulario);
+    console.log(this.parentForm);
+    
+    
   }
 
 }
