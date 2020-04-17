@@ -1,36 +1,32 @@
 <div class="text-center">
-    <h1>Formulário de Categoria</h1>
-    <form [formGroup]="formCategoria" (submit)="submitFormulario()">
-        <div class="p-grid p-justify-center" *ngIf="!!idCategoria">
+    <h1>Formulário de Registro</h1>
+    <form [formGroup]="formRegistro" (submit)="submitFormulario()">
+        <div class="p-grid p-justify-center" *ngIf="!!idRegistro">
             <div class="p-col-4">
-                <input type="hidden" [value]="idCategoria"> 
+                <input type="hidden" [value]="idRegistro"> 
             </div>
         </div>
         <br/>
         <div class="p-grid p-justify-center">
             <div class="p-col-4">
                 <cf-input-text-padrao
-                label="Ícone"
-                nomeFormulario="icone"
-                [parentForm]="formCategoria"
+                label="Descrição"
+                nomeFormulario="descricao"
+                [parentForm]="formRegistro"
                 ></cf-input-text-padrao>
             </div>
         </div>
         <br/>
         <div class="p-grid p-justify-center">
             <div class="p-col-4">
-                <cf-input-text-padrao
-                label="Título"
-                nomeFormulario="titulo"
-                [parentForm]="formCategoria"
-                ></cf-input-text-padrao>
+                
             </div>
         </div>
         <br/>
         <div class="p-grid p-justify-center">
             <div class="p-col-4">
                 <button pButton type="submit"
-                    [disabled]="formCategoria.invalid"
+                    [disabled]="formRegistro.invalid"
                     icon="fa fa-plus" label="Cadastrar"></button>
                     
             </div>

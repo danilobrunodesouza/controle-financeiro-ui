@@ -20,18 +20,11 @@ export class CategoriaFormularioComponent implements OnInit {
   ngOnInit(): void {
     this.idCategoria = this.activatedRoute.snapshot.params.idCategoria;
 
-    if (!!this.idCategoria) {
-      this.formCategoria = this.formBuilder.group({
-        titulo: ['', Validators.required],
-        icone: ['', Validators.required],
-      });
-    } else {
-      this.formCategoria = this.formBuilder.group({
-        titulo: ['', Validators.required],
-        icone: ['', Validators.required],
-      });
+    this.formCategoria = this.formBuilder.group({
+      titulo: ['', Validators.required],
+      icone: ['', Validators.required],
+    });
 
-    }
   }
 
   submitFormulario() {
@@ -39,10 +32,10 @@ export class CategoriaFormularioComponent implements OnInit {
     const titulo = this.formCategoria.get('titulo').value;
     const icone = this.formCategoria.get('icone').value;
 
-    if(!!id){
-      console.log({id, titulo, icone});
+    if (!!id) {
+      console.log({ id, titulo, icone });
     } else {
-      console.log({titulo, icone});
+      console.log({ titulo, icone });
     }
 
     alert("feito o submit");

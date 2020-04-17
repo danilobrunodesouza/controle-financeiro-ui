@@ -6,6 +6,7 @@ import { CategoriaFormularioComponent } from './categoria/categoria-formulario/c
 import { RegistroComponent } from './registro/registro.component';
 import { RegistroListaComponent } from './registro/registro-lista/registro-lista.component';
 import { GraficoDonutComponent } from './relatorios/grafico-donut/grafico-donut.component';
+import { RegistroFormularioComponent } from './registro/registro-formulario/registro-formulario.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   
   {path : 'registro', component : RegistroComponent},
   {path : 'registro/lista', component : RegistroListaComponent},
- 
+  {path : 'registro/formulario', component : RegistroFormularioComponent},
+  {path : 'registro/formulario/:idRegistro', component : RegistroFormularioComponent},
  
   {path : 'relatorio/donut', component : GraficoDonutComponent},
 ];
