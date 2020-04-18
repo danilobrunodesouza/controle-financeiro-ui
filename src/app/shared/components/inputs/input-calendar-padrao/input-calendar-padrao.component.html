@@ -1,0 +1,10 @@
+<div [formGroup]="parentForm" class="text-left">
+    <span class="ui-float-label">
+        <p-calendar [formControlName]="nomeFormulario" [locale]="br" dateFormat="dd/mm/yy"
+            [inputStyle]="{'width':'100%'}" [style]="{'width':'100%'}" [monthNavigator]="true" [yearNavigator]="true"
+            yearRange="2000:2040">
+        </p-calendar>
+        <label for="float-input">{{label}}</label>
+    </span>
+
+</div>
