@@ -14,7 +14,6 @@ import { RelatoriosModule } from './relatorios/relatorios.module';
 @NgModule({
   declarations: [
     AppComponent,
-    
   ],
   imports: [
     BrowserModule,

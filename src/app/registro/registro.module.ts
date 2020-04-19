@@ -5,6 +5,8 @@ import { CategoriaModule } from '../categoria/categoria.module';
 import { RegistroListaModule } from './registro-lista/registro-lista.module';
 import { RegistroFormularioComponent } from './registro-formulario/registro-formulario.component';
 import { RegistroFormularioModule } from './registro-formulario/registro-formulario.module';
+import { FormularioRapidoComponent } from './formulario-rapido/formulario-rapido.component';
+import { FormularioRapidoModule } from './formulario-rapido/formulario-rapido.module';
 
 @NgModule({
     declarations : [ RegistroComponent ],
@@ -12,6 +14,7 @@ import { RegistroFormularioModule } from './registro-formulario/registro-formula
     imports : [
         CommonModule,
         RegistroListaModule,
+        FormularioRapidoModule,
         RegistroFormularioModule,
         CategoriaModule,
     ]
