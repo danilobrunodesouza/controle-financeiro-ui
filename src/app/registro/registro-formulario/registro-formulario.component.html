@@ -3,36 +3,36 @@
     <form [formGroup]="formRegistro" (submit)="submitFormulario()">
         <div class="p-grid p-justify-center" *ngIf="!!idRegistro">
             <div class="p-col-4">
-                <input type="hidden" [value]="idRegistro"> 
+                <input type="hidden" [value]="idRegistro">
             </div>
         </div>
-        <br/>
+        <br />
         <div class="p-grid p-justify-center">
             <div class="p-col-4">
-                <cf-input-text-padrao
-                label="Descrição"
-                nomeFormulario="descricao"
-                [parentForm]="formRegistro"
-                ></cf-input-text-padrao>
+                <cf-input-text-padrao label="Descrição" nomeFormulario="descricao" [parentForm]="formRegistro">
+                </cf-input-text-padrao>
             </div>
         </div>
-        <br/>
+        <br />
         <div class="p-grid p-justify-center">
             <div class="p-col-4">
-                <cf-input-calendar-padrao
-                    label="Data"
-                    nomeFormulario="data"
-                    [parentForm]="formRegistro"
-                    ></cf-input-calendar-padrao>
+                <cf-input-dropdown-padrao label="Cateoria" [options]="retorno" nomeFormulario="categoria"
+                    optionLabel="label" dataKey="id" [parentForm]="formRegistro"></cf-input-dropdown-padrao>
             </div>
         </div>
-        <br/>
+        <br />
         <div class="p-grid p-justify-center">
             <div class="p-col-4">
-                <button pButton type="submit"
-                    [disabled]="formRegistro.invalid"
-                    icon="fa fa-plus" label="Cadastrar"></button>
-                    
+                <cf-input-calendar-padrao label="Data" nomeFormulario="data" [parentForm]="formRegistro">
+                </cf-input-calendar-padrao>
+            </div>
+        </div>
+        <br />
+        <div class="p-grid p-justify-center">
+            <div class="p-col-4">
+                <button pButton type="submit" [disabled]="formRegistro.invalid" icon="fa fa-plus"
+                    label="Cadastrar"></button>
+
             </div>
         </div>
     </form>
