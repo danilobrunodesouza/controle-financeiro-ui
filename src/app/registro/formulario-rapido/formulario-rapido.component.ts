@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoriaService } from 'src/app/categoria/categoria.service';
+import { Categoria } from 'src/app/categoria/categoria.interface';
 
 @Component({
   selector: 'app-formulario-rapido',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioRapidoComponent implements OnInit {
 
-  constructor() { }
+  categorias: Categoria[];
+
+  constructor(private categoriaService: CategoriaService) { }
 
   ngOnInit(): void {
+    this.categoriaService.pegaTodasCategorias()
+      .subscribe(categorias => {
+        this.categorias = categorias
+        console.log(this.categorias);
+        
+      });
   }
 
 }

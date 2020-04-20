@@ -11,6 +11,7 @@ export class CategoriaModel implements Categoria, Tabelavel{
         this.icone = icone;
         this.titulo = titulo;
     }
+    
 
     mostraNaTabela(): string {
         return ` <i class='${this.icone}'></i>  ${this.titulo}`;

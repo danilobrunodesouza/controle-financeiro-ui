@@ -7,6 +7,38 @@
     text-align: left;
 }
 
+.cor-padrao {
+    color: #654EA3 !important;
+}
+
+.cor-alternada-0 {
+    color: white !important;
+    background-color: #00A86B !important;
+}
+.cor-alternada-1 {
+    color: white !important;
+    background-color: #FF6384 !important;
+}
+
+.cor-alternada-2 {
+    color: white !important;
+    background-color: #FFCE56 !important;
+}
+
+.cor-alternada-3 {
+    color: white !important;
+    background-color: #9900FF !important;
+}
+.cor-alternada-4 {
+    color: white !important;
+    background-color: #36A2EB !important;
+}
+.cor-alternada-5 {
+    color: white !important;
+    background-color: #E7E9ED !important;
+}
+
+
 .botao-padrao{
     margin: 0px 10px;
     padding: 5px 10px !important;

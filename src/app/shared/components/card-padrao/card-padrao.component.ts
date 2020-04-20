@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'cf-card-padrao',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardPadraoComponent implements OnInit {
 
+  @Input() objeto : any;
+  @Input() index : number;
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.objeto);
   }
 
 }

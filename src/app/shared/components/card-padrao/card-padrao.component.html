@@ -1,14 +1,14 @@
-<p-card header="Carro" [style]="{width: '360px'}" styleClass="ui-card-shadow text-center">
+<p-card header="{{objeto.titulo}}" styleClass="ui-card-shadow text-center cor-alternada-{{index}}">
     <div class="text-center">
-    <p-header>
-        <div class="text-center">
-            <i class="fa fa-car fa-5x"></i>
-        </div>
-    </p-header>
-    <div>Dispesas com o carro</div>
-    <p-footer>
-        <button pButton type="button" label="Save" icon="pi pi-check" style="margin-right: .25em"></button>
-        <button pButton type="button" label="Cancel" icon="pi pi-times" class="ui-button-secondary"></button>
-    </p-footer>
-</div>
+        <p-header>
+            <div class="text-center">
+                <i class="{{objeto.icone}} fa-5x cor-alternada-{{index}}"></i>
+            </div>
+        </p-header>
+
+        <p-footer>
+            <br/>
+            <button pButton type="button" label="Adicionar Gasto" icon="fa fa-plus" style="margin-right: .25em"></button>
+        </p-footer>
+    </div>
 </p-card>
