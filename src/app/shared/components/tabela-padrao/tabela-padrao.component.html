@@ -13,8 +13,7 @@
     <ng-template pTemplate="body" let-objeto>
         <tr>
             <td *ngFor="let col of cols" class="text-center">
-                <span [outerHTML]="objeto[col.field] | mostraDadosNaTabela"></span>                  
-                
+                <span [outerHTML]="objeto[col.field] | mostraDadosNaTabela"></span>                                  
             </td>
             <td class="text-center">
                 <a routerLink="/{{urlDoObjeto}}/formulario/{{objeto.id}}" 

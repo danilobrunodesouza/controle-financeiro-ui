@@ -9,11 +9,13 @@ import { CategoriaModule } from './categoria/categoria.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistroModule } from './registro/registro.module';
 import { RelatoriosModule } from './relatorios/relatorios.module';
+import { SubcategoriaModule } from './subcategoria/subcategoria.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,7 @@ import { RelatoriosModule } from './relatorios/relatorios.module';
     BrowserAnimationsModule,
     RelatoriosModule,
     CategoriaModule,
+    SubcategoriaModule,
     RegistroModule,
   ],
   providers: [],
