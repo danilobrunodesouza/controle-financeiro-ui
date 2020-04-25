@@ -7,16 +7,19 @@ import { InputCalendarPadraoComponent } from './input-calendar-padrao/input-cale
 import {CalendarModule} from 'primeng/calendar';
 import { InputDropdownPadraoComponent } from './input-dropdown-padrao/input-dropdown-padrao.component';
 import {DropdownModule} from 'primeng/dropdown';
+import { InputMoedaPadraoComponent } from './input-moeda-padrao/input-moeda-padrao.component';
+import { DirectivesModule } from '../../directives/directives.module';
 
 
 @NgModule({
-    declarations : [ InputTextPadraoComponent, InputCalendarPadraoComponent, InputDropdownPadraoComponent ],
-    exports : [ InputTextPadraoComponent, InputCalendarPadraoComponent, InputDropdownPadraoComponent ],
+    declarations : [ InputTextPadraoComponent, InputCalendarPadraoComponent, InputDropdownPadraoComponent, InputMoedaPadraoComponent ],
+    exports : [ InputTextPadraoComponent, InputCalendarPadraoComponent, InputDropdownPadraoComponent, InputMoedaPadraoComponent ],
     imports : [ 
         CommonModule,
         FormsModule,
         DropdownModule,
         ReactiveFormsModule,
+        DirectivesModule,
         CalendarModule,
         InputTextModule,
      ]

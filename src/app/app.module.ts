@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -6,15 +7,15 @@ import { AppComponent } from './app.component';
 
 import { HeaderModule } from './header/header.module';
 import { CategoriaModule } from './categoria/categoria.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistroModule } from './registro/registro.module';
 import { RelatoriosModule } from './relatorios/relatorios.module';
 import { SubcategoriaModule } from './subcategoria/subcategoria.module';
+import { DirectivesModule } from './shared/directives/directives.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
     
   ],
   imports: [
@@ -25,6 +26,7 @@ import { SubcategoriaModule } from './subcategoria/subcategoria.module';
     RelatoriosModule,
     CategoriaModule,
     SubcategoriaModule,
+    DirectivesModule,
     RegistroModule,
   ],
   providers: [],

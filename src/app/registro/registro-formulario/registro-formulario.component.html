@@ -9,8 +9,8 @@
         <br />
         <div class="p-grid p-justify-center">
             <div class="p-col-4">
-                <cf-input-text-padrao label="Descrição" nomeFormulario="descricao" [parentForm]="formRegistro">
-                </cf-input-text-padrao>
+                <cf-input-calendar-padrao label="Data" nomeFormulario="data" [parentForm]="formRegistro">
+                </cf-input-calendar-padrao>
             </div>
         </div>
         <br />
@@ -23,16 +23,22 @@
         <br />
         <div class="p-grid p-justify-center">
             <div class="p-col-4">
-                <cf-input-calendar-padrao label="Data" nomeFormulario="data" [parentForm]="formRegistro">
-                </cf-input-calendar-padrao>
+                <cf-input-text-padrao label="Descrição" nomeFormulario="descricao" [parentForm]="formRegistro">
+                </cf-input-text-padrao>
             </div>
         </div>
         <br />
         <div class="p-grid p-justify-center">
             <div class="p-col-4">
-                <button pButton type="submit" [disabled]="formRegistro.invalid" icon="fa fa-plus"
-                    label="Cadastrar"></button>
-
+                <cf-input-moeda-padrao label="Valor" nomeFormulario="valor" [parentForm]="formRegistro">
+                </cf-input-moeda-padrao>
+            </div>
+        </div>
+        <br />
+        <div class="p-grid p-justify-center">
+            <div class="p-col-4">
+                <button pButton type="submit" [disabled]="formRegistro.invalid" icon="fa fa-plus" label="Cadastrar">
+                </button>
             </div>
         </div>
     </form>
