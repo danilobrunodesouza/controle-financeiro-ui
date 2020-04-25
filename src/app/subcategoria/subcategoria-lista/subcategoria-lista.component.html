@@ -1,1 +1,9 @@
-<p>subcategoria-lista works!</p>
+<cf-tabela-padrao 
+    [titulo]="titulo"
+    [urlDoObjeto]="urlDoObjeto"
+    [objetos]="subcategorias$ | async"
+    [comPaginacao]="comPaginacao"
+    [numeroDeLinhas]="numeroDeLinhas"
+    [headers]="headers"
+    (eventoDeRemocaoDeItem)="recebeItemParaSerRemovido($event)">
+</cf-tabela-padrao>
