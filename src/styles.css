@@ -31,13 +31,16 @@
 }
 .cor-alternada-4 {
     color: white !important;
-    background-color: #36A2EB !important;
+    background-color: #ffa538 !important;
 }
 .cor-alternada-5 {
     color: white !important;
-    background-color: #E7E9ED !important;
+    background-color: #36A2EB !important;
 }
-
+.cor-alternada-6 {
+    color: white !important;
+    background-color: #CCC !important;
+}
 
 .botao-padrao{
     margin: 0px 10px;

@@ -12,11 +12,12 @@ import { RelatoriosModule } from './relatorios/relatorios.module';
 import { SubcategoriaModule } from './subcategoria/subcategoria.module';
 import { DirectivesModule } from './shared/directives/directives.module';
 
+import { MenuPrincipalModule } from './menu-principal/menu-principal.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -26,6 +27,7 @@ import { DirectivesModule } from './shared/directives/directives.module';
     RelatoriosModule,
     CategoriaModule,
     SubcategoriaModule,
+    MenuPrincipalModule,
     DirectivesModule,
     RegistroModule,
   ],

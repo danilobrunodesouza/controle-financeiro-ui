@@ -11,9 +11,12 @@ import { FormularioRapidoComponent } from './registro/formulario-rapido/formular
 import { SubcategoriaComponent } from './subcategoria/subcategoria.component';
 import { SubcategoriaListaComponent } from './subcategoria/subcategoria-lista/subcategoria-lista.component';
 import { SubcategoriaFormularioComponent } from './subcategoria/subcategoria-formulario/subcategoria-formulario.component';
+import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
 
 
 const routes: Routes = [
+  {path : '', component : MenuPrincipalComponent},
+
   {path : 'categoria', component : CategoriaComponent},
   {path : 'categoria/lista', component : CategoriaListaComponent},
   {path : 'categoria/formulario', component : CategoriaFormularioComponent},
@@ -27,8 +30,8 @@ const routes: Routes = [
   {path : 'registro', component : RegistroComponent},
   {path : 'registro/lista', component : RegistroListaComponent},
   {path : 'registro/formulario', component : RegistroFormularioComponent},
-  {path : 'registro/formulario-rapido', component : FormularioRapidoComponent},
   {path : 'registro/formulario/:idRegistro', component : RegistroFormularioComponent},
+  {path : 'registro/formulario-rapido', component : FormularioRapidoComponent},
  
   {path : 'relatorio/donut', component : GraficoDonutComponent},
 ];
