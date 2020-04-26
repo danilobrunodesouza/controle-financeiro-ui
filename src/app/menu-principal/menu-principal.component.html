@@ -1,8 +1,18 @@
+
 <br/>
 <div class="p-grid">
-    <div class="p-col-4" 
+    <div class="p-col-4 " 
         *ngFor="let menu of menus;let i = index"> 
-        <cf-card-padrao [objeto]="menu" [index]="i"></cf-card-padrao>
+        
+        <div *ngIf="i % 3 == 0" class="animated bounceInLeft">
+            <cf-card-padrao [objeto]="menu" [index]="i"></cf-card-padrao>
+        </div>  
+        <div *ngIf="i % 3 == 1" class="animated bounceInUp">
+            <cf-card-padrao [objeto]="menu" [index]="i"></cf-card-padrao>
+        </div>  
+        <div *ngIf="i % 3 == 2" class="animated bounceInRight">
+            <cf-card-padrao [objeto]="menu" [index]="i"></cf-card-padrao>
+        </div>  
     </div>
     
 </div>

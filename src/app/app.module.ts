@@ -13,7 +13,7 @@ import { SubcategoriaModule } from './subcategoria/subcategoria.module';
 import { DirectivesModule } from './shared/directives/directives.module';
 
 import { MenuPrincipalModule } from './menu-principal/menu-principal.module';
-
+import { NgwWowModule } from 'ngx-wow';
 
 @NgModule({
   declarations: [
@@ -26,6 +26,7 @@ import { MenuPrincipalModule } from './menu-principal/menu-principal.module';
     BrowserAnimationsModule,
     RelatoriosModule,
     CategoriaModule,
+    NgwWowModule,
     SubcategoriaModule,
     MenuPrincipalModule,
     DirectivesModule,
