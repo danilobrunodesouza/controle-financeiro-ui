@@ -1,11 +1,13 @@
-<div [formGroup]="parentForm" class="text-left">
+<div [formGroup]="parentForm" class="text-center">
+
     <span class="ui-float-label">
         <p-dropdown [options]="options"
             [style]="{'width':'100%'}"
             [optionLabel]="optionLabel"
             [dataKey]="dataKey"
+            placeholder="Selecione uma opção"
             [formControlName]="nomeFormulario"></p-dropdown>
-        <label for="float-input">{{label}}</label>
+        <label for="float-input" >{{label}}</label>
     </span>
 
 </div>

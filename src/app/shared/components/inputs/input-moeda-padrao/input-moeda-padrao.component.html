@@ -1,8 +1,11 @@
 <div [formGroup]="parentForm">
-    <span class="ui-float-label">   
+    <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon"> R$ </span>
         <input type="text" style="width:100%" 
-        cfSomenteNumeros
-        [formControlName]="nomeFormulario" pInputText>
-        <label for="float-input">{{label}}</label>
-    </span>
+            cfMoeda
+            [formControlName]="nomeFormulario" pInputText>
+        
+    </div>
+    
+        
 </div>

@@ -1,1 +1,40 @@
-<p>subcategoria-formulario works!</p>
+<div class="text-center">
+    <h1>Formulário de Subcategoria</h1>
+    <form [formGroup]="formSubcategoria" (submit)="submitFormulario()">
+        <div class="p-grid p-justify-center" *ngIf="!!idSubcategoria">
+            <div class="p-col-4">
+                <input type="hidden" [value]="idSubcategoria">
+            </div>
+        </div>
+        <br />
+
+        <div class="p-grid p-justify-center">
+            <div class="p-col-4">
+                <cf-input-dropdown-padrao label="Cateoria" [options]="retorno" nomeFormulario="categoria"
+                    optionLabel="label" dataKey="id" [parentForm]="formSubcategoria"></cf-input-dropdown-padrao>
+            </div>
+        </div>
+        <br />
+        <div class="p-grid p-justify-center">
+            <div class="p-col-4">
+                <cf-input-text-padrao label="Ícone" nomeFormulario="icone" [parentForm]="formSubcategoria">
+                </cf-input-text-padrao>
+            </div>
+        </div>
+        <br />
+        <div class="p-grid p-justify-center">
+            <div class="p-col-4">
+                <cf-input-text-padrao label="Título" nomeFormulario="titulo" [parentForm]="formSubcategoria">
+                </cf-input-text-padrao>
+            </div>
+        </div>
+        <br />
+        
+        <div class="p-grid p-justify-center">
+            <div class="p-col-4">
+                <button pButton type="submit" [disabled]="formSubcategoria.invalid" icon="fa fa-plus" label="Cadastrar">
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
