@@ -14,10 +14,13 @@ import { DirectivesModule } from './shared/directives/directives.module';
 
 import { MenuPrincipalModule } from './menu-principal/menu-principal.module';
 import { NgwWowModule } from 'ngx-wow';
+import { ListaCardPadraoModule } from './shared/components/cards/lista-card-padrao/lista-card-padrao.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -27,6 +30,7 @@ import { NgwWowModule } from 'ngx-wow';
     RelatoriosModule,
     CategoriaModule,
     NgwWowModule,
+    ListaCardPadraoModule,
     SubcategoriaModule,
     MenuPrincipalModule,
     DirectivesModule,

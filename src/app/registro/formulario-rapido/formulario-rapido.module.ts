@@ -1,7 +1,8 @@
 import { NgModule } from "@angular/core";
 import { FormularioRapidoComponent } from './formulario-rapido.component';
 import { CommonModule } from '@angular/common';
-import { CardPadraoModule } from 'src/app/shared/components/card-padrao/card-padrao.module';
+
+import { ListaCardPadraoModule } from 'src/app/shared/components/cards/lista-card-padrao/lista-card-padrao.module';
 
 
 @NgModule({
@@ -9,7 +10,7 @@ import { CardPadraoModule } from 'src/app/shared/components/card-padrao/card-pad
     exports : [ FormularioRapidoComponent ],
     imports : [ 
         CommonModule,
-        CardPadraoModule,
+        ListaCardPadraoModule
      ],
 })
 export class FormularioRapidoModule {}

@@ -1,0 +1,16 @@
+<div class="p-grid">
+    <div class="p-col-4 " 
+        *ngFor="let objeto of objetos;let i = index"> 
+        
+        <div *ngIf="i % 3 == 0" class="animated bounceInLeft">
+            <cf-card-padrao [objeto]="objeto" [index]="i"></cf-card-padrao>
+        </div>  
+        <div *ngIf="i % 3 == 1" class="animated bounceInUp">
+            <cf-card-padrao [objeto]="objeto" [index]="i"></cf-card-padrao>
+        </div>  
+        <div *ngIf="i % 3 == 2" class="animated bounceInRight">
+            <cf-card-padrao [objeto]="objeto" [index]="i"></cf-card-padrao>
+        </div>  
+    </div>
+    
+</div>

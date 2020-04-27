@@ -2,14 +2,14 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from '@angular/common';
 
 import { MenuPrincipalComponent } from './menu-principal.component';
-import { CardPadraoModule } from '../shared/components/card-padrao/card-padrao.module';
+import { ListaCardPadraoModule } from '../shared/components/cards/lista-card-padrao/lista-card-padrao.module';
 
 @NgModule({
     declarations : [ MenuPrincipalComponent ],
     exports : [ MenuPrincipalComponent ],
     imports : [ 
         CommonModule,
-        CardPadraoModule
+        ListaCardPadraoModule
      ],
 })
 export class MenuPrincipalModule {}
