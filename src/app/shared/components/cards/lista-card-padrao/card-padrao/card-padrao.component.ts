@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'cf-card-padrao',
@@ -7,13 +8,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardPadraoComponent implements OnInit {
 
-  @Input() objeto : any;
-  @Input() index : number;
+  @Input() objeto: any;
+  @Input() index: number;
 
+  
   constructor() { }
 
   ngOnInit(): void {
     console.log(this.objeto);
+  }
+
+  clickNoCartao() {
+      
   }
 
 }
