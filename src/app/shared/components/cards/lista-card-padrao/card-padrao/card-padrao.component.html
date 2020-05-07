@@ -1,4 +1,6 @@
-<p-card header="{{objeto.titulo}}" styleClass="ui-card-shadow text-center cor-alternada-{{index}}">
+<p-card header="{{objeto.titulo}}" 
+    (click)="clickNoCartao()"
+    styleClass="ui-card-shadow text-center cor-alternada-{{index}}">
     <div class="text-center">
         <p-header>
             <div class="text-center">

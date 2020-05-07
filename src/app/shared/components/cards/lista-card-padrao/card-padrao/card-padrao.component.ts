@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ObjetoCard } from './objeto-card.interface';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,18 +10,20 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class CardPadraoComponent implements OnInit {
 
-  @Input() objeto: any;
+  @Input() objeto: ObjetoCard;
   @Input() index: number;
 
   
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
     console.log(this.objeto);
   }
 
   clickNoCartao() {
-      
+    console.log(this.objeto.url);
+    
+      this.router.navigateByUrl(this.objeto.url);
   }
 
 }

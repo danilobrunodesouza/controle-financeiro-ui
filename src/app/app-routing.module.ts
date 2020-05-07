@@ -12,6 +12,7 @@ import { SubcategoriaComponent } from './subcategoria/subcategoria.component';
 import { SubcategoriaListaComponent } from './subcategoria/subcategoria-lista/subcategoria-lista.component';
 import { SubcategoriaFormularioComponent } from './subcategoria/subcategoria-formulario/subcategoria-formulario.component';
 import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
+import { GraficoDeLinhaComponent } from './relatorios/grafico-de-linha/grafico-de-linha.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path : 'registro/formulario-rapido', component : FormularioRapidoComponent},
  
   {path : 'relatorio/donut', component : GraficoDonutComponent},
+  {path : 'relatorio/linha', component : GraficoDeLinhaComponent},
 ];
 
 @NgModule({
