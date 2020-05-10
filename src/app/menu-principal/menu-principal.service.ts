@@ -11,7 +11,7 @@ export class MenuPrincipalService {
 
   listaTudo() : Observable<MenuPrincipal[]> {
     return of([
-      { id: 1, icone: 'fa fa-barcode', titulo: 'Registrar Gasto', descricao : 'Registre seus Gastos', url : 'registro/registro/formulario-rapido' },
+      { id: 1, icone: 'fa fa-barcode', titulo: 'Registrar Gasto', descricao : 'Registre seus Gastos', url : '/registro/formulario-rapido' },
       { id: 2, icone: 'fa fa-money', titulo: 'Registrar Receita', descricao : 'Registre sua Receita', url : '/registro/formulario-rapido' },
       { id: 3, icone: 'fa fa-pie-chart', titulo: 'Relatórios', descricao :'Veja seus Relatórios', url : '/registro/formulario-rapido' },
       { id: 4, icone: 'fa fa-magic', titulo: 'Registro Automático', descricao :'Registros são incluídos automaticamente', url : '/registro/formulario-rapido' },

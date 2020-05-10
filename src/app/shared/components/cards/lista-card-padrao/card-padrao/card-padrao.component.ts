@@ -12,6 +12,7 @@ export class CardPadraoComponent implements OnInit {
 
   @Input() objeto: ObjetoCard;
   @Input() index: number;
+  @Input() corUsada: string;
 
   
   constructor(private router : Router) { }
@@ -21,9 +22,8 @@ export class CardPadraoComponent implements OnInit {
   }
 
   clickNoCartao() {
-    console.log(this.objeto.url);
-    
-      this.router.navigateByUrl(this.objeto.url);
+    if(!!this.objeto.url) this.router.navigateByUrl(this.objeto.url);
+  
   }
 
 }

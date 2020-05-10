@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ListaCardPadraoComponent implements OnInit {
 
   @Input() objetos : any []
+  @Input() corUsada : string
   
   constructor() { }
 

@@ -43,6 +43,29 @@
     color: white !important;
     background-color: #CCC !important;
 }
+.cor-invertida-0 {
+    color: #00A86B !important;
+}
+.cor-invertida-1 {
+    color: #FF6384 !important;
+}
+
+.cor-invertida-2 {
+    color:  #FFCE56 !important;
+}
+
+.cor-invertida-3 {
+    color:  #9900FF !important;
+}
+.cor-invertida-4 {
+    color: #ffa538 !important;
+}
+.cor-invertida-5 {
+    color: #36A2EB !important;
+}
+.cor-invertida-6 {
+    color: #888 !important;
+}
 
 .botao-padrao{
     margin: 0px 10px;
