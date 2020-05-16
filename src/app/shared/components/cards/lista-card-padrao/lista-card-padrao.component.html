@@ -1,6 +1,7 @@
 <div class="p-grid">
     <div class="p-col-4 " 
-        *ngFor="let objeto of objetos;let i = index"> 
+        *ngFor="let objeto of objetos;let i = index"
+        cfEscurecerQuandoPassarMouse> 
         
         <div *ngIf="i % 3 == 0" class="animated bounceInLeft">
             <cf-card-padrao [objeto]="objeto" [index]="i" [corUsada]='corUsada'></cf-card-padrao>
