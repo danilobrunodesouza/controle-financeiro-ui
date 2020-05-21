@@ -13,6 +13,7 @@ import { SubcategoriaListaComponent } from './subcategoria/subcategoria-lista/su
 import { SubcategoriaFormularioComponent } from './subcategoria/subcategoria-formulario/subcategoria-formulario.component';
 import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
 import { GraficoDeLinhaComponent } from './relatorios/grafico-de-linha/grafico-de-linha.component';
+import { RelatoriosComponent } from './relatorios/relatorios.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path : 'registro/formulario/:idRegistro', component : RegistroFormularioComponent},
   {path : 'registro/formulario-rapido', component : FormularioRapidoComponent},
  
+  {path : 'relatorio', component : RelatoriosComponent},
   {path : 'relatorio/donut', component : GraficoDonutComponent},
   {path : 'relatorio/linha', component : GraficoDeLinhaComponent},
 ];
