@@ -4,6 +4,7 @@ import { DadosGraficoDonut } from './grafico-donut/dados-grafico-donut.interface
 import { DadosGraficoDeLinha } from './grafico-de-linha/dados-grafico-de-linha.interface';
 import { MesesService } from '../shared/services/meses.service';
 import { DadosGraficoDeBarra } from './grafico-de-barra/dados-grafico-de-barra.interface';
+import { DadosGraficoAreaPolar } from './grafico-area-polar/dados-grafico-area-polar.interface';
 
 @Component({
   selector: 'cf-relatorios',
@@ -13,6 +14,7 @@ import { DadosGraficoDeBarra } from './grafico-de-barra/dados-grafico-de-barra.i
 export class RelatoriosComponent implements OnInit {
 
 
+  dadosGraficoAreaPolar: DadosGraficoAreaPolar[] = [];
   dadosGraficoDonut: DadosGraficoDonut[] = [];
   dadosGraficoDeLinha: DadosGraficoDeLinha;
   dadosGraficoDeBarra: DadosGraficoDeBarra;
@@ -24,6 +26,15 @@ export class RelatoriosComponent implements OnInit {
     this._montaGraficoDonut();
     this._montaGraficoDeLinha();
     this._montaGraficoDeBarra();
+    this._montaGraficoAreaPolar();
+  }
+  _montaGraficoAreaPolar() {
+    this.registroService.pegaTodosRegistros()
+      .subscribe(registros => {
+        registros.forEach(r => {
+          this.dadosGraficoAreaPolar.push({ titulo: r.categoria.titulo, valor: r.valor });
+        });
+      });    
   }
 
   _montaGraficoDeBarra() {

@@ -59,7 +59,7 @@ export class RegistroService {
       },
       {
         id: 2, data: new Date(), categoria: new CategoriaModel(2, 'fa fa-graduation-cap', 'Educação'),
-        descricao: "alura", valor: 75
+        descricao: "alura", valor: 400
       },
       {
         id: 3, data: new Date(), categoria: new CategoriaModel(2, 'fa fa-car', 'Carro'),

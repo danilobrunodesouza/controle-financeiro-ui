@@ -9,11 +9,11 @@ export class CoresEmHexaService {
 
   listaTudo() : string [] {
     return [
+      "#36A2EB",
       "#FF6384",
       "#4BC0C0",
       "#FFCE56",
       "#9900FF",
-      "#36A2EB",
       "#E7E9ED",
       "#00A86B",
     ];

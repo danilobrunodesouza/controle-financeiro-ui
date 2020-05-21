@@ -1,7 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Registro } from 'src/app/registro/registro.interface';
-import { RegistroService } from 'src/app/registro/registro.service';
-import { Observable } from 'rxjs';
 import { CoresEmHexaService } from 'src/app/shared/services/cores-em-hexa.service';
 import { DadosGraficoDonut } from './dados-grafico-donut.interface';
 
@@ -12,7 +9,6 @@ import { DadosGraficoDonut } from './dados-grafico-donut.interface';
 })
 export class GraficoDonutComponent implements OnInit {
 
-  registros: Registro[];
   dadosDoGrafico: any;
 
   @Input() dadosGraficoDonut : DadosGraficoDonut[] = [];
@@ -24,14 +20,11 @@ export class GraficoDonutComponent implements OnInit {
   }
 
   _montaGrafico() {
-    const titulos = this.dadosGraficoDonut.map(d => d.titulo);
-    const valores = this.dadosGraficoDonut.map(d => d.valor);
-
     this.dadosDoGrafico = {
-      labels: [...titulos],
+      labels: this.dadosGraficoDonut.map(d => d.titulo),
       datasets: [
         {
-          data: [...valores],
+          data: this.dadosGraficoDonut.map(d => d.valor),
           backgroundColor: this.coresEmHexaService.listaTudo(),
         }]
     };

@@ -4,15 +4,17 @@ import { CommonModule } from '@angular/common';
 import { GraficoDonutModule } from './grafico-donut/grafico-donut.module';
 import { GraficoDeLinhaModule } from './grafico-de-linha/grafico-de-linha.module';
 import { GraficoDeBarraModule } from './grafico-de-barra/grafico-de-barra.module';
+import { GraficoAreaPolarModule } from './grafico-area-polar/grafico-area-polar.module';
 
 
 @NgModule({
-declarations : [ RelatoriosComponent,],
+declarations : [ RelatoriosComponent ],
 exports : [ RelatoriosComponent ],
 imports : [ 
     CommonModule,
     GraficoDeLinhaModule,
     GraficoDonutModule,
+    GraficoAreaPolarModule,
     GraficoDeBarraModule
  ],
 })

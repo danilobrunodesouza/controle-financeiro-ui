@@ -10,7 +10,7 @@ import { BarraGrafico } from './barra-grafico.interface';
 })
 export class GraficoDeBarraComponent implements OnInit {
 
-  informacoesDoGraficoDeBarra: any;
+  dadosDoGrafico: any;
 
   @Input() dadosGraficoDeBarra : DadosGraficoDeBarra;
 
@@ -19,7 +19,7 @@ export class GraficoDeBarraComponent implements OnInit {
   
   ngOnInit(): void {
 
-    this.informacoesDoGraficoDeBarra = {
+    this.dadosDoGrafico = {
         labels: this.dadosGraficoDeBarra.periodo,
         datasets: []
       }
@@ -29,7 +29,7 @@ export class GraficoDeBarraComponent implements OnInit {
         const indiceDaCor = i % cores.length;
         const cor = cores[indiceDaCor];
 
-        this.informacoesDoGraficoDeBarra.datasets.push(this._pegaDataset(barra, cor));
+        this.dadosDoGrafico.datasets.push(this._pegaDataset(barra, cor));
       }
 
 

@@ -11,14 +11,14 @@ import { LinhaGrafico } from './linha-grafico.interface';
 })
 export class GraficoDeLinhaComponent implements OnInit {
 
-  informacoesDoGraficoDeLinha: any;
+  dadosDoGrafico: any;
 
   @Input() dadosGraficoDeLinha: DadosGraficoDeLinha;
 
   constructor(private coresEmHexaService: CoresEmHexaService) { }
 
   ngOnInit(): void {
-    this.informacoesDoGraficoDeLinha = {
+    this.dadosDoGrafico = {
       labels: this.dadosGraficoDeLinha.periodo,
       datasets: []
     }
@@ -30,7 +30,7 @@ export class GraficoDeLinhaComponent implements OnInit {
       const indiceDaCor = indice % cores.length;
       const dataset = this._pegaDataset(linha, cores[indiceDaCor]);
 
-      this.informacoesDoGraficoDeLinha.datasets.push(dataset);
+      this.dadosDoGrafico.datasets.push(dataset);
     }
 
   }

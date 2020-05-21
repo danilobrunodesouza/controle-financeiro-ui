@@ -15,6 +15,7 @@ import { MenuPrincipalComponent } from './menu-principal/menu-principal.componen
 import { GraficoDeLinhaComponent } from './relatorios/grafico-de-linha/grafico-de-linha.component';
 import { RelatoriosComponent } from './relatorios/relatorios.component';
 import { GraficoDeBarraComponent } from './relatorios/grafico-de-barra/grafico-de-barra.component';
+import { GraficoAreaPolarComponent } from './relatorios/grafico-area-polar/grafico-area-polar.component';
 
 
 const routes: Routes = [
@@ -37,9 +38,6 @@ const routes: Routes = [
   {path : 'registro/formulario-rapido', component : FormularioRapidoComponent},
  
   {path : 'relatorio', component : RelatoriosComponent},
-  {path : 'relatorio/donut', component : GraficoDonutComponent},
-  {path : 'relatorio/linha', component : GraficoDeLinhaComponent},
-  {path : 'relatorio/barra', component : GraficoDeBarraComponent},
 ];
 
 @NgModule({
