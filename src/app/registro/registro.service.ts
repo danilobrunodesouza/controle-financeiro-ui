@@ -10,6 +10,17 @@ import { RegistroDTO } from './registro-dto.interface';
 export class RegistroService {
 
   constructor() { }
+  pegaTodasEntradasESaidasDoAno(): Observable<RegistroDTO[]> {
+    return of(
+      [
+        {
+          titulo: 'Entrada', valores: [65, 59, 80, 81, 56, 55, 40, 34, 54, 67, 23, 65]
+        },
+        {
+          titulo: 'Saída', valores: [28, 48, 40, 19, 86, 27, 90, 81, 56, 55, 40, 34],
+        },
+      ]);
+  }
 
   pegaTodosLancamentosDoAno(): Observable<RegistroDTO[]> {
     return of(

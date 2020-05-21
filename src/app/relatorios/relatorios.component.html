@@ -1,15 +1,28 @@
-<cf-grafico-donut
-    [dadosGraficoDonut]="dadosGraficoDonut">
-</cf-grafico-donut>
-
-
 <br/>
 <br/>
 <br/>
+<div class="p-grid p-justify-center">
+    <div class="p-col-6">
+        <cf-grafico-donut [dadosGraficoDonut]="dadosGraficoDonut">
+        </cf-grafico-donut>
+    </div>
+</div>
+<br/>
+<br/>
+<br/>
+<div class="p-grid p-justify-center">
+    <div class="p-col-6">
+        <cf-grafico-de-linha [dadosGraficoDeLinha]='dadosGraficoDeLinha'>
+        </cf-grafico-de-linha>
+    </div>
+</div>
+<br/>
+<br/>
 <br/>
 
-<cf-grafico-de-linha
-    [dadosGraficoDeLinha]=dadosGraficoDeLinha>
-
-</cf-grafico-de-linha>
-
+<div class="p-grid p-justify-center">
+    <div class="p-col-6">
+        <cf-grafico-de-barra [dadosGraficoDeBarra]='dadosGraficoDeBarra'>
+        </cf-grafico-de-barra>
+    </div>
+</div>

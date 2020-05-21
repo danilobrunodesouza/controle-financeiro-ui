@@ -14,6 +14,7 @@ import { SubcategoriaFormularioComponent } from './subcategoria/subcategoria-for
 import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
 import { GraficoDeLinhaComponent } from './relatorios/grafico-de-linha/grafico-de-linha.component';
 import { RelatoriosComponent } from './relatorios/relatorios.component';
+import { GraficoDeBarraComponent } from './relatorios/grafico-de-barra/grafico-de-barra.component';
 
 
 const routes: Routes = [
@@ -38,6 +39,7 @@ const routes: Routes = [
   {path : 'relatorio', component : RelatoriosComponent},
   {path : 'relatorio/donut', component : GraficoDonutComponent},
   {path : 'relatorio/linha', component : GraficoDeLinhaComponent},
+  {path : 'relatorio/barra', component : GraficoDeBarraComponent},
 ];
 
 @NgModule({

@@ -3,6 +3,7 @@ import { RegistroService } from '../registro/registro.service';
 import { DadosGraficoDonut } from './grafico-donut/dados-grafico-donut.interface';
 import { DadosGraficoDeLinha } from './grafico-de-linha/dados-grafico-de-linha.interface';
 import { MesesService } from '../shared/services/meses.service';
+import { DadosGraficoDeBarra } from './grafico-de-barra/dados-grafico-de-barra.interface';
 
 @Component({
   selector: 'cf-relatorios',
@@ -12,8 +13,9 @@ import { MesesService } from '../shared/services/meses.service';
 export class RelatoriosComponent implements OnInit {
 
 
-  dadosGraficoDonut: DadosGraficoDonut[] = []
-  dadosGraficoDeLinha: DadosGraficoDeLinha
+  dadosGraficoDonut: DadosGraficoDonut[] = [];
+  dadosGraficoDeLinha: DadosGraficoDeLinha;
+  dadosGraficoDeBarra: DadosGraficoDeBarra;
 
   constructor(private registroService: RegistroService,
     private mesesService : MesesService,) { }
@@ -21,6 +23,22 @@ export class RelatoriosComponent implements OnInit {
   ngOnInit(): void {
     this._montaGraficoDonut();
     this._montaGraficoDeLinha();
+    this._montaGraficoDeBarra();
+  }
+
+  _montaGraficoDeBarra() {
+    this.dadosGraficoDeBarra = { 
+      periodo : this.mesesService.listaTodos(),
+      barras : []
+     }
+
+    this.registroService.pegaTodasEntradasESaidasDoAno()
+      .subscribe(registrosDTO => {
+        registrosDTO.forEach( r => {
+          this.dadosGraficoDeBarra.barras.push({ titulo : r.titulo, valores : r.valores});
+        });
+
+      });
   }
   _montaGraficoDeLinha() {
     this.dadosGraficoDeLinha = { 
