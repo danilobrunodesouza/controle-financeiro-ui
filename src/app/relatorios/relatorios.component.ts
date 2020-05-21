@@ -5,6 +5,7 @@ import { DadosGraficoDeLinha } from './grafico-de-linha/dados-grafico-de-linha.i
 import { MesesService } from '../shared/services/meses.service';
 import { DadosGraficoDeBarra } from './grafico-de-barra/dados-grafico-de-barra.interface';
 import { DadosGraficoAreaPolar } from './grafico-area-polar/dados-grafico-area-polar.interface';
+import { DadosGraficoPizza } from './grafico-pizza/dados-grafico-pizza.interface';
 
 @Component({
   selector: 'cf-relatorios',
@@ -13,9 +14,10 @@ import { DadosGraficoAreaPolar } from './grafico-area-polar/dados-grafico-area-p
 })
 export class RelatoriosComponent implements OnInit {
 
-
   dadosGraficoAreaPolar: DadosGraficoAreaPolar[] = [];
   dadosGraficoDonut: DadosGraficoDonut[] = [];
+  dadosGraficoPizza: DadosGraficoPizza[] = [];
+
   dadosGraficoDeLinha: DadosGraficoDeLinha;
   dadosGraficoDeBarra: DadosGraficoDeBarra;
 
@@ -24,9 +26,19 @@ export class RelatoriosComponent implements OnInit {
 
   ngOnInit(): void {
     this._montaGraficoDonut();
+    this._montaGraficoPizza();
     this._montaGraficoDeLinha();
     this._montaGraficoDeBarra();
     this._montaGraficoAreaPolar();
+  }
+  _montaGraficoPizza() {
+    this.registroService.pegaTodosRegistros()
+      .subscribe(registros => {
+        registros.forEach(r => {
+          this.dadosGraficoPizza.push({ titulo: r.categoria.titulo, valor: r.valor });
+        });
+      });    
+    
   }
   _montaGraficoAreaPolar() {
     this.registroService.pegaTodosRegistros()
