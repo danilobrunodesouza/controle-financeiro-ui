@@ -2,10 +2,10 @@
     <div class="ui-inputgroup">
         <span class="ui-inputgroup-addon"> R$ </span>
         <input type="text" style="width:100%" 
-            cfMoeda
-            [formControlName]="nomeFormulario" pInputText>
-        
-    </div>
-    
-        
+            (keyup)="mudou($event)"
+            pInputText
+            placeholder="0,00"
+            [formControlName]="nomeFormulario" >
+        </div>
+  
 </div>
