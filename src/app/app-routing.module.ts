@@ -16,6 +16,9 @@ import { GraficoDeLinhaComponent } from './relatorios/grafico-de-linha/grafico-d
 import { RelatoriosComponent } from './relatorios/relatorios.component';
 import { GraficoDeBarraComponent } from './relatorios/grafico-de-barra/grafico-de-barra.component';
 import { GraficoAreaPolarComponent } from './relatorios/grafico-area-polar/grafico-area-polar.component';
+import { TipoContaFormularioComponent } from './tipo-conta/tipo-conta-formulario/tipo-conta-formulario.component';
+import { TipoContaListaComponent } from './tipo-conta/tipo-conta-lista/tipo-conta-lista.component';
+import { TipoContaComponent } from './tipo-conta/tipo-conta.component';
 
 
 const routes: Routes = [
@@ -30,6 +33,12 @@ const routes: Routes = [
   {path : 'subcategoria/lista', component : SubcategoriaListaComponent},
   {path : 'subcategoria/formulario', component : SubcategoriaFormularioComponent},
   {path : 'subcategoria/formulario/:idSubcategoria', component : SubcategoriaFormularioComponent},
+  
+  
+  {path : 'tipo-conta', component : TipoContaComponent},
+  {path : 'tipo-conta/lista', component : TipoContaListaComponent},
+  {path : 'tipo-conta/formulario', component : TipoContaFormularioComponent},
+  {path : 'tipo-conta/formulario/:idTipoConta', component : TipoContaFormularioComponent},
   
   {path : 'registro', component : RegistroComponent},
   {path : 'registro/lista', component : RegistroListaComponent},

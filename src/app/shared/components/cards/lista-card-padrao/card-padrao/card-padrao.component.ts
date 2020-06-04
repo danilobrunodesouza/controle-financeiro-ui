@@ -14,7 +14,7 @@ export class CardPadraoComponent implements OnInit {
   @Input() index: number;
   @Input() corUsada: string;
 
-  
+   
   constructor(private router : Router) { }
 
   ngOnInit(): void {
@@ -23,7 +23,6 @@ export class CardPadraoComponent implements OnInit {
 
   clickNoCartao() {
     if(!!this.objeto.url) this.router.navigateByUrl(this.objeto.url);
-  
   }
 
 }
