@@ -35,7 +35,7 @@ export class RelatoriosComponent implements OnInit {
     this.registroService.pegaTodosRegistros()
       .subscribe(registros => {
         registros.forEach(r => {
-          this.dadosGraficoPizza.push({ titulo: r.categoria.titulo, valor: r.valor });
+          this.dadosGraficoPizza.push({ titulo: r.categoria.titulo, valor: r.valorMoeda });
         });
       });    
     
@@ -44,7 +44,7 @@ export class RelatoriosComponent implements OnInit {
     this.registroService.pegaTodosRegistros()
       .subscribe(registros => {
         registros.forEach(r => {
-          this.dadosGraficoAreaPolar.push({ titulo: r.categoria.titulo, valor: r.valor });
+          this.dadosGraficoAreaPolar.push({ titulo: r.categoria.titulo, valor: r.valorMoeda });
         });
       });    
   }
@@ -80,7 +80,7 @@ export class RelatoriosComponent implements OnInit {
     this.registroService.pegaTodosRegistros()
       .subscribe(registros => {
         registros.forEach(r => {
-          this.dadosGraficoDonut.push({ titulo: r.categoria.titulo, valor: r.valor });
+          this.dadosGraficoDonut.push({ titulo: r.categoria.titulo, valor: r.valorMoeda });
         });
       });
   }

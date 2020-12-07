@@ -13,6 +13,9 @@
     <ng-template pTemplate="body" let-objeto>
         <tr>
             <td *ngFor="let col of cols" class="text-center">
+                <span 
+                *ngIf="col.field == 'valorMoeda'"
+                [outerHTML]="objeto[col.field] | mostraDadosNaTabela">MOEDA</span>                                  
                 <span [outerHTML]="objeto[col.field] | mostraDadosNaTabela"></span>                                  
             </td>
             <td class="text-center">

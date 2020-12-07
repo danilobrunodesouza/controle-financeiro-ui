@@ -5,5 +5,5 @@ export interface Registro {
     data : Date,
     categoria : CategoriaModel,
     descricao : string,
-    valor: number,
+    valorMoeda: number,
 }
