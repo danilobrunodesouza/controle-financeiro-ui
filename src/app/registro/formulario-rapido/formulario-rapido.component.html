@@ -1,7 +1,32 @@
 <div class="text-center cor-padrao">
     <h1>Formulario Rapido</h1>
 </div>
+
+
+
 <cf-lista-card-padrao 
+    *ngIf="!subcategorias.length"
     corUsada='invertida'
+    (clicouNoObjeto)="pegaCategoriaClicada($event)"
     [objetos]="categorias"
 ></cf-lista-card-padrao>
+
+<cf-lista-card-padrao 
+    *ngIf="!!subcategorias.length"
+    corUsada='invertida'
+    (clicouNoObjeto)="pegaSubcategoriaClicada($event)"
+    [objetos]="subcategorias"
+></cf-lista-card-padrao>
+
+
+<form [formGroup]="formularioRegistro">
+    <input type="text" name="idCategoria" formControlName="idCategoria">
+    <input type="text" name="idSubcategoria" formControlName="idSubcategoria">
+    <br/>
+    <br/>
+    <cf-input-calendar-padrao label="Data" nomeFormulario="data" [parentForm]="formularioRegistro">
+    </cf-input-calendar-padrao>
+    
+    <input type="text" name="valor" formControlName="valor" >
+</form>
+

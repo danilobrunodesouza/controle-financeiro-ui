@@ -42,16 +42,9 @@ export class RegistroFormularioComponent implements OnInit {
 
   submitFormulario() {
     const id = this.idRegistro;
-    const data = this.formRegistro.get('data').value;
-    const valor = this.formRegistro.get('valor').value;
-    const categoria = this.formRegistro.get('categoria').value;
-    const descricao = this.formRegistro.get('descricao').value;
-
-    if (!!id) {
-      console.log({id, data, valor, categoria, descricao});
-    } else {
-      console.log({data, valor, categoria, descricao});
-    }
+    const registro = this.formRegistro.getRawValue();
+    console.log('registro', registro);
+    
 
     alert("feito o submit");
   }

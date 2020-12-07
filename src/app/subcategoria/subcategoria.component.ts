@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-subcategoria',
+  selector: 'cf-subcategoria',
   templateUrl: './subcategoria.component.html',
   styleUrls: ['./subcategoria.component.css']
 })
